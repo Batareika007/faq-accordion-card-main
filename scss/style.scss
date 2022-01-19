@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'global';
+@import 'colors';
 
 .hide-scroll {
     -ms-overflow-style: none;
@@ -28,26 +29,25 @@
 
 /* container max width -------------------  */
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    max-width: 1160px;
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url(../design/desktop-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:before {
+        content: "";
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        // background-color: rgba(255, 255, 255, 0.1); 
+    }
 }
 
-.header {
-    margin: 0 auto;
-
-}
-
-/* main -------------------  */
-.main {
-    margin: 0 auto;
-    flex: 1 1 auto;
-}
-
-/* footer -------------------  */
-.footer {
-    margin: 0 auto;
-
+.content__hiden-text {
+    display: none;
 }

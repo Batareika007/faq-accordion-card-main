@@ -354,6 +354,17 @@ template {
   border: 0;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 :focus,
 :active {
   outline: none;
@@ -369,16 +380,6 @@ footer,
 header,
 aside {
   display: block;
-}
-
-html,
-body {
-  width: 100%;
-  font-size: 100%;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 input,
@@ -399,6 +400,7 @@ select {
   /* text-overflow: ''; */
 }
 
+/* remove 'X' from input box to clear the text*/
 input::-ms-clear {
   display: none;
 }
@@ -420,6 +422,8 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-size: inherit;
+  font-weight: 700;
 }
 
 a,
@@ -429,16 +433,29 @@ a:hover {
   color: inherit;
 }
 
-ul {
+ul li {
   list-style-type: none;
   padding: 0;
 }
 
 img {
-  vertical-align: top;
+  vertical-align: middle;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* ============================  Global style end  ========================== 
+   ========================================================================== */
+.hide-scroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .wrapper {
@@ -465,40 +482,25 @@ img {
           justify-content: center;
 }
 
-/* ============================  Global style end  ========================== 
-   ========================================================================== */
-.hide-scroll {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.hide-scroll::-webkit-scrollbar {
-  display: none;
-}
-
 /* container max width -------------------  */
-.container {
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: url(../design/desktop-design.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  max-width: 1160px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.header {
-  margin: 0 auto;
-}
-
-/* main -------------------  */
-.main {
-  margin: 0 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-/* footer -------------------  */
-.footer {
-  margin: 0 auto;
+.content__hiden-text {
+  display: none;
 }
