@@ -16,109 +16,101 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
-      font-size: 11px;
+      font-size: 16px;
       text-align: center;
+      color: white;
     }
 
     .attribution a {
-      color: hsl(228, 45%, 44%);
+      color: hsl(230, 15%, 92%);
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <section>
-      <div class="image">
-      </div>
-      <div class="content">
-        <h1>faq</h1>
-        <ul>
-          <li>
-            <div class="content__header">
-              <span>
-                How many team members can I invite?
-              </span>
-              <img src="images/icon-arrow-down.svg">
-            </div>
-            <div class="content__hiden-text">
-              You can invite up to 2 additional users on the Free plan. There is no limit on
-              team members for the Premium plan.
-            </div>
-          </li>
-          <li>
-            <div class="content__header">
-              <span>
-                What is the maximum file upload size?
-              </span>
-              <img src="images/icon-arrow-down.svg">
-            </div>
-            <div class="content__hiden-text">
-              No more than 2GB. All files in your account must fit your allotted storage space.
-            </div>
-          </li>
-
-          <li>
-            <div class="content__header">
-              <span>
-                How do I reset my password?
-              </span>
-              <img src="images/icon-arrow-down.svg">
-            </div>
-            <div class="content__hiden-text">
-              Click “Forgot password” from the login page or “Change password” from your profile page.
-              A reset link will be emailed to you.
-            </div>
-          </li>
-
-          <li>
-            <div class="content__header">
-              <span>
-                Can I cancel my subscription?
-              </span>
-              <img src="images/icon-arrow-down.svg">
-            </div>
-            <div class="content__hiden-text">
-              Yes! Send us a message and we’ll process your request no questions asked.
-            </div>
-          </li>
-
-          <li>
-            <div class="content__header">
-              <span>
-                Do you provide additional support?
-              </span>
-              <img src="images/icon-arrow-down.svg">
-            </div>
-            <div class="content__hiden-text">
-              Chat and email support is available 24/7. Phone lines are open during normal business hours.
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-  <!-- 
-
-     
   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  -->
+    <main>
+      <div class="container">
+
+        <section class="main-section">
+
+          <div class="image">
+            <img src="images/illustration-woman-online-desktop.svg" alt="">
+          </div>
+
+          <div class="content hide-scroll">
+            <h1>faq</h1>
+
+            <ul class="content__list">
+              <li>
+                <details class="content__text">
+                  <summary class="content__header"> <span> How many team members can I invite?</span><img
+                      src="images/icon-arrow-down.svg"></summary>
+                  <p>
+                    You can invite up to 2 additional users on the Free plan. There is no limit on
+                    team members for the Premium plan.
+                  </p>
+                </details>
+              </li>
+
+              <li>
+                <details open class="content__text">
+                  <summary class="content__header">
+                    <span>What is the maximum file upload size?</span><img src="images/icon-arrow-down.svg">
+                  </summary>
+                  <p>
+                    No more than 2GB. All files in your account must fit your allotted storage space.
+                  </p>
+                </details>
+              </li>
+
+              <li>
+                <details class="content__text">
+                  <summary class="content__header">
+                    <span>How do I reset my password?</span><img src="images/icon-arrow-down.svg">
+                  </summary>
+                  <p>
+                    Click “Forgot password” from the login page or “Change password” from your profile page.
+                    A reset link will be emailed to you.
+                  </p>
+                </details>
+              </li>
+
+              <li>
+                <details class="content__text">
+                  <summary class="content__header">
+                    <span>Can I cancel my subscription?</span><img src="images/icon-arrow-down.svg">
+                  </summary>
+                  <p>
+                    Yes! Send us a message and we’ll process your request no questions asked.
+                  </p>
+                </details>
+              </li>
+
+              <li>
+                <details class="content__text">
+                  <summary class="content__header">
+                    <span>Do you provide additional support?</span><img src="images/icon-arrow-down.svg">
+                  </summary>
+                  <p>
+
+                    Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                  </p>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#" target="_blank">Alexei</a>.
+      </div>
+    </footer>
+  
+
 </body>
 
 </html>
