@@ -36,46 +36,60 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 920px;
+    padding: 0 15px;
+    max-width: 950px;
+    margin-bottom: 24px;
 }
 
 .main-section {
     background-color: white;
-    overflow: hidden;
     margin-top: 129px;
     display: flex;
+    flex-direction: row;
     border-radius: 20px;
     height: 509px;
 
     &::before {
         content: url('../images/illustration-box-desktop.svg');
         z-index: 1000;
-        position: absolute;
-        left: 20%;
-        top: 36%;
+        position: relative;
+        width: 0;
+        right: 100px;
+        top: 40%;
+        z-index: 1000;
     }
 }
 
 .image {
-    flex: 1 1 460px;
+    flex: 1 0 50%;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-position: -571px -290px;
     background-size: auto 185%;
     height: auto;
+    background-attachment: local;
+    overflow: hidden;
+
+    .image__mobile {
+        display: none;
+    }
 
     img {
+        width: 100%;
         display: block;
         position: relative;
         top: 74px;
         right: 74px;
 
+
+
     }
+
 }
 
 .content {
-    flex: 1 1 460px;
-    padding: 64px 90px 60px 16px;
+    flex: 1 1 50%;
+    padding: 64px 90px 60px 0;
     overflow-y: scroll;
 
     h1 {
@@ -146,5 +160,71 @@ details {
         line-height: 18px;
         margin: 12px 0 0;
         color: $text-color;
+        max-width: 320px;
     }
+}
+
+@media screen and (max-width:1024px) {
+    .container {
+        max-width: 500px;
+
+    }
+
+    .main-section {
+        padding: 0 24px 46px 24px;
+        flex-direction: column;
+        height: auto;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .image {
+        flex: 1 0 130px;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-position: top center;
+        background-size: auto;
+        overflow: visible;
+
+        .image__desktop {
+            display: none;
+        }
+
+        .image__mobile {
+            margin: 0 auto;
+            display: block;
+            top: -80px;
+            width: 200px;
+            height: auto;
+        }
+
+        img {
+            right: 0;
+        }
+
+    }
+
+    .content {
+        padding: 0 24px;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+
+}
+
+@media screen and (max-width:425px) {
+
+    .content {
+        padding: 0;
+
+        &__header {
+            padding-right: 0;
+        }
+
+    }
+
 }
