@@ -135,6 +135,22 @@ details {
         transition: 0.3s ease-out;
     }
 
+
+    summary {
+        list-style: none;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 12px 0 0;
+        color: $text-color;
+        max-width: 320px;
+        /* from Frontend Mentor */
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+    }
+
     &[open] {
 
         summary {
@@ -149,20 +165,17 @@ details {
                 color: inherit;
             }
         }
-    }
 
-    summary {
-        list-style: none;
-    }
-
-    p {
-        font-size: 12px;
-        line-height: 18px;
-        margin: 12px 0 0;
-        color: $text-color;
-        max-width: 320px;
+        p {
+            opacity: 1;
+        }
     }
 }
+
+
+
+
+/* =========== media query ================= */
 
 @media screen and (max-width:1024px) {
     .container {

@@ -600,6 +600,22 @@ details img {
   transition: 0.3s ease-out;
 }
 
+details summary {
+  list-style: none;
+}
+
+details p {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 12px 0 0;
+  color: #787887;
+  max-width: 320px;
+  /* from Frontend Mentor */
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
 details[open] summary {
   color: #1d1e35;
   font-weight: 700;
@@ -614,18 +630,11 @@ details[open] summary:hover {
   color: inherit;
 }
 
-details summary {
-  list-style: none;
+details[open] p {
+  opacity: 1;
 }
 
-details p {
-  font-size: 12px;
-  line-height: 18px;
-  margin: 12px 0 0;
-  color: #787887;
-  max-width: 320px;
-}
-
+/* =========== media query ================= */
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 500px;
